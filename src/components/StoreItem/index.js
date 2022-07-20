@@ -30,7 +30,7 @@ export function StoreItem({
               <div className="d-flex flex-column align-items-center" style={{ gap: '.5rem' }}>
                 <div className="d-flex flex-row align-items-center justfify-content-center" style={{ gap: '.5rem' }}>
                   <Button>-</Button>
-                  <span className="fs-5">1</span>
+                  <span className="fs-5">{quantity}</span>
                   <span>in cart</span>
                   <Button>+</Button>
                 </div>
