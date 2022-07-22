@@ -6,19 +6,19 @@
     "imgUrl": "/images/book.jpg"
   },
   {
-    "id": 1,
+    "id": 2,
     "name": "Computador",
     "price": 5200,
     "imgUrl": "/images/computer.jpg"
   },
   {
-    "id": 1,
+    "id": 3,
     "name": "Carro",
     "price": 10000,
     "imgUrl": "/images/car.jpg"
   },
   {
-    "id": 1,
+    "id": 4,
     "name": "Banana",
     "price": 3.99,
     "imgUrl": "/images/banana.jpg"
