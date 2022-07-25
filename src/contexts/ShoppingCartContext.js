@@ -1,12 +1,20 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 
 export const ShoppingCartContext = createContext({});
 
 export function ShoppingCartProvider({ children }) {
-  const [cartItems, setCartItems] = useState([{}]);
+  const [cartItems, setCartItems] = useState([{
+    quantity: 0,
+  }]);
   const [isOpen, setIsOpen] = useState(false);
+  const [cartQuantity, setCartQuantity] = useState(0);
 
-  const cartQuantity = cartItems.reduce((quantity, item) => item.quantity + quantity);
+  useEffect(() => {
+    setCartQuantity(cartItems.reduce(
+      (quantity, item) => quantity + item.quantity,
+      0,
+    ));
+  }, [cartItems]);
 
   const openCart = () => setIsOpen(true);
   const closeCart = () => setIsOpen(false);
