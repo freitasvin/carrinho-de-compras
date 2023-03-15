@@ -1,7 +1,8 @@
 import React, { useContext } from 'react';
 import {
-  Button, Container, Nav, Navbar as NavbarBs, NavLink,
+  Button, Container, Nav, Navbar as NavbarBs,
 } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import { ShoppingCartContext } from '../../contexts/ShoppingCartContext';
 
 export function Navbar() {
@@ -10,13 +11,13 @@ export function Navbar() {
     <NavbarBs className="bg-white shadow-sm mb-3">
       <Container>
         <Nav className="me-auto">
-          <Nav.Link to="/" as={NavLink}>
+          <Nav.Link to="/" as={Link}>
             Home
           </Nav.Link>
-          <Nav.Link to="/" as={NavLink}>
+          <Nav.Link to="/store" as={Link}>
             Store
           </Nav.Link>
-          <Nav.Link to="/" as={NavLink}>
+          <Nav.Link to="/about" as={Link}>
             About
           </Nav.Link>
         </Nav>
